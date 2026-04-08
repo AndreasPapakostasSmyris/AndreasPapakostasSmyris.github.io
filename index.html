@@ -3,6 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>YouTube Playlist</title>
+    <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+    }
+
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+    }
+
+    .left {
+      border-right: 1px solid #333;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
 
