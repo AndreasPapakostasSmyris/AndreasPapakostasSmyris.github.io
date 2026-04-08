@@ -11,59 +11,61 @@
       color: white;
       font-family: Arial, sans-serif;
     }
-
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       height: 100vh;
     }
-
     .left, .right {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 60px;
     }
-
-    .left {
-      border-right: 1px solid #333;
-    }
-
     h1 {
       margin-bottom: 10px;
     }
   </style>
 </head>
+
+
+
+
+
 <body>
 
 <h2>Η Playlist μου</h2>
-<div class="container">
+
+<div class="container" >
 
   <!-- Αριστερά -->
-  <div class="left">
-    <h1>Αριστερό Κείμενο</h1>
-    <p>Εδώ γράφεις το κείμενο της αριστερής πλευράς.</p>
+  <div class="left" >
+	<div style="margin-top:-600px;">
+
+		<h1>Αριστερό Κείμενο</h1>
+		<p>PapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatito
+		PapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatito
+		PapasGatito</p>
+	</div>
   </div>
 
   <!-- Δεξιά -->
-  <div class="right">
-    <h1>Δεξί Κείμενο</h1>
-    <p>Εδώ γράφεις το κείμενο της δεξιάς πλευράς.</p>
-  </div>
-
-</div>
-  
-  <!-- Βίντεο -->
-<iframe width="800" height="150"
+    <!-- Βίντεο -->
+  <iframe width="800" height="150"
     src="https://www.youtube.com/embed/videoseries?list=PLPEJTSKudQZDULLhDyenXwqnjUEoLOq56&controls=0&rel=0&modestbranding=1"
     title="YouTube playlist"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
+ 
+</div>
+  
+
+
 
 
 
 
 </body>
-</html>
+</html>	
