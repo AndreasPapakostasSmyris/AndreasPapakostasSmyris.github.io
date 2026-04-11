@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>YouTube Playlist</title>
+  <!--Χωρίζω τη σελίδα σε 2 μέρη, αριστερό και δεξί. Βάζω μαύρο background. -->
     <style>
     body {
       margin: 0;
-      height: 100vh;
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
     }
     .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       height: 100vh;
     }
     .left, .right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 60px;
+       width: 50%; /* Μισή-μισή */
+       padding: 20px;
     }
-    h1 {
-      margin-bottom: 10px;
+
+    .left {
+       background-color: #f2f2f2;
+    }
+
+    .right {
+      background-color: #d8d8d8;
     }
   </style>
 </head>
@@ -34,37 +33,29 @@
 
 <body>
 
-<h2>Η Playlist μου</h2>
+<div class="container">
+    <div class="left">
+        <h2>Αριστερή πλευρά</h2>
+        <p>papas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatito</p>
+        <br/><br/><br/><br/><br/>
+        <p>papas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatito</p>
+        
+        <iframe width="800" height="150 "
+          src="https://www.youtube.com/embed/videoseries?list=PLPEJTSKudQZDULLhDyenXwqnjUEoLOq56&controls=0&rel=0&modestbranding=1"
+         title="YouTube playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+       </iframe>
 
-<div class="container" >
+    </div>
 
-  <!-- Αριστερά -->
-  <div class="left" >
-	<div style="margin-top:-600px;">
-
-		<h1>Αριστερό Κείμενο</h1>
-		<p>PapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatito
-		PapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatitoPapasGatito
-		PapasGatito</p>
-	</div>
-  </div>
-
-  <!-- Δεξιά -->
-    <!-- Βίντεο -->
-  <iframe width="800" height="150"
-    src="https://www.youtube.com/embed/videoseries?list=PLPEJTSKudQZDULLhDyenXwqnjUEoLOq56&controls=0&rel=0&modestbranding=1"
-    title="YouTube playlist"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
- 
+    <div class="right">
+        <h2>Δεξιά πλευρά</h2>
+        <p>Εδώ γράφεις άλλο κείμενο.</p>
+        <img src="C:\Users\andre\Desktop\papas-gatito.gif"
+    </div>
 </div>
-  
-
-
-
-
 
 
 </body>
