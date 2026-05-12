@@ -2,61 +2,101 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <title>YouTube Playlist</title>
-  <!--Χωρίζω τη σελίδα σε 2 μέρη, αριστερό και δεξί. Βάζω μαύρο background. -->
-    <style>
-    body {
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Gallery</title>
+
+  <style>
+    html, body {
       margin: 0;
+      padding: 0;
     }
-    .container {
-      display: flex;
+
+    section {
+      position: relative;
+      width: 100%;
       height: 100vh;
-    }
-    .left, .right {
-       width: 50%; /* Μισή-μισή */
-       padding: 20px;
+      overflow: hidden;
     }
 
-    .left {
-       background-color: #f2f2f2;
+    section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .right {
-      background-color: #d8d8d8;
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 60px;
+      box-sizing: border-box;
+      gap: 40px;
+    }
+
+    .box {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .text {
+      color: white;
+      font-size: 2rem;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 150px;
+      border: none;
+      display: block;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
     }
   </style>
 </head>
-
-
-
-
-
 <body>
 
-<div class="container">
-    <div class="left">
-        <h2>Αριστερή πλευρά</h2>
-        <p>papas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatito</p>
-        <br/><br/><br/><br/><br/>
-        <p>papas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatitopapas-gatito</p>
-        
-        <iframe width="800" height="150 "
+  <!-- 1η εικόνα -->
+  <section>
+    <img src="images/papas-gatito.gif" alt="Image 1">
+
+    <div class="overlay">
+      <div class="box text">
+        Κείμενο για την πρώτη εικόνα
+      </div>
+
+      <div class="box">
+        <iframe 
           src="https://www.youtube.com/embed/videoseries?list=PLPEJTSKudQZDULLhDyenXwqnjUEoLOq56&controls=0&rel=0&modestbranding=1"
-         title="YouTube playlist"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
-       </iframe>
-
+        </iframe>
+      </div>
     </div>
+  </section>
 
-    <div class="right">
-        <h2>Δεξιά πλευρά</h2>
-        <p>Εδώ γράφεις άλλο κείμενο.</p>
-        <img src="papas-gatito.gif"
+  <!-- 2η εικόνα -->
+  <section>
+    <img src="images/images.jfif" alt="Image 2">
+
+    <div class="overlay reverse">
+      <div class="box text">
+        Κείμενο για τη δεύτερη εικόνα
+      </div>
+
+      <div class="box">
+        <iframe 
+          src="https://www.youtube.com/embed/videoseries?list=PLPEJTSKudQZDULLhDyenXwqnjUEoLOq56&controls=0&rel=0&modestbranding=1"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
-</div>
-
+  </section>
 
 </body>
-</html>	
+</html>
